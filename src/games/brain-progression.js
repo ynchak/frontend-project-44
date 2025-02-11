@@ -16,7 +16,7 @@ const brainProgression = () => {
   const progression = fillProgression();
   const i = getRandomNumber(progression.length) - 1;
   const answer = progression[i];
-  progression[i] = '...';
+  progression[i] = '..';
   const question = progression;
   return [question.join(' '), `${answer}`];
 };
