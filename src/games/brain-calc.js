@@ -4,7 +4,7 @@ const MAX = 100;
 
 const getOperation = () => {
   const operations = ['+', '-', '*'];
-  const index = getRandomNumber(operations.length);
+  const index = getRandomNumber(operations.length - 1);
   return operations[index];
 };
 
@@ -28,11 +28,11 @@ const getAnswer = (n1, op, n2) => {
 
 const brainCalc = () => {
   const [n1, op, n2] = [
-    getRandomNumber(MAX) + 1,
+    getRandomNumber(MAX),
     getOperation(),
-    getRandomNumber(MAX) + 1,
+    getRandomNumber(MAX),
   ];
-  const question = `Question: ${n1} ${op} ${n2}`;
+  const question = `${n1} ${op} ${n2}`;
   const answer = getAnswer(n1, op, n2);
   return [question, answer];
 };
