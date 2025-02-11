@@ -11,6 +11,7 @@ const engine = (userName, rules, game) => {
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`
       );
       console.log(`Let's try again, ${userName}!`);
+      i = 0;
     } else {
       console.log('Correct!');
     }
