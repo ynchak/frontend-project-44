@@ -7,9 +7,8 @@ const engine = (userName, rules, game) => {
     const [question, answer] = game();
     const userAnswer = readlineSync.question(`Question: ${question}\n`);
     if (answer !== userAnswer) {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`
-      );
+      const message = `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`;
+      console.log(message);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
